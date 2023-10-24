@@ -22,6 +22,9 @@ module.exports = {
             {
                 name: 'Git : Sodium-Dev',
             },
+            {
+                name: "I'm Open Source !"
+            },
         ]
           
         setInterval(()=> {
