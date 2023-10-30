@@ -17,6 +17,9 @@ module.exports = {
                 name: "Made by Charlie",
             },
             {
+                name: "https://sodium.dev"
+            },
+            {
                 name: 'X : @SodiumDev',
             },
             {
