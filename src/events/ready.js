@@ -17,10 +17,16 @@ module.exports = {
                 name: "Made by Charlie",
             },
             {
+                name: "https://sodium.dev"
+            },
+            {
                 name: 'X : @SodiumDev',
             },
             {
                 name: 'Git : Sodium-Dev',
+            },
+            {
+                name: "I'm Open Source !"
             },
         ]
           
@@ -34,7 +40,7 @@ module.exports = {
         }, 5000)
 
         console.log(`${client.user.username} en ligne ! (${client.user.id}) `)
-        //
+        console.log(`Discord Invite : https://discord.com/oauth2/authorize?client_id=${client.user.id}&scope=bot%20applications.commands&permissions=8`)
         try {
             await rest.put(
                 Routes.applicationCommands(client.user.id),
