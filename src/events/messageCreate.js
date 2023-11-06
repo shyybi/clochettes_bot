@@ -15,11 +15,10 @@ module.exports = {
 
             const logMsg = new EmbedBuilder()
                 .setColor(0x48f542)
-                .setTitle('New Message')
+                .setTitle('Created Message')
                 .addFields(
                     { name: " ", value: " " },
                     { name: 'From user:', value: `${author}`, inline: true },
-                    { name: " ", value: " " },
                     { name: 'In:', value: `#${msgChan}`, inline: true },
                     { name: " ", value: " " },
                     { name: " ", value: " " },
@@ -28,10 +27,11 @@ module.exports = {
                 )
                 .setThumbnail('https://cdn.discordapp.com/avatars/1006183291864481873/40fd85bc6ef83af39ca8e6d08b6c619d')
                 .setTimestamp()
-                .setFooter({ text: `par ${userName}`, iconURL: `${userIcon}` });
+                .setFooter({ text: `by ${userName}`, iconURL: `${userIcon}` });
 
             logChann.send({ embeds: [logMsg] });
         }
         CreateMsg();
+
     }
 };

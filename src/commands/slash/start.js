@@ -7,8 +7,5 @@ module.exports = {
     run: async (Client, interaction) => {
 
         await interaction.reply('aaar')
-
-
-
     },
 };

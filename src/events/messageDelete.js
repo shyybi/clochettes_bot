@@ -19,7 +19,6 @@ module.exports = {
                 .addFields(
                     { name: " ", value: " " },
                     { name: 'From user:', value: `${author}`, inline: true },
-                    { name: " ", value: " ", inline: true },
                     { name: 'In:', value: `#${msgChan}`, inline: true },
                     { name: " ", value: " " },
                     { name: " ", value: " " },
