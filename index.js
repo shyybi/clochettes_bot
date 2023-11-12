@@ -15,6 +15,7 @@ const client = new Discord.Client({
       GatewayIntentBits.GuildMessages,
       GatewayIntentBits.GuildMembers,
       GatewayIntentBits.MessageContent,
+      
       /**
       GatewayIntentBits.GuildMemberRemove,
       GatewayIntentBits.GuildBanAdd,
@@ -39,7 +40,6 @@ fs.readdirSync('./src/events').forEach(async file => {
 const slashcommands = [];
 
 fs.readdirSync('./src/commands/slash').forEach(async file => {
-  console.log('arbre1')
   const command = await require(`./src/commands/slash/${file}`);
   client.slashdatas.push(command.data.toJSON());
   client.slashcommands.set(command.data.name, command);

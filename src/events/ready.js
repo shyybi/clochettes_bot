@@ -51,9 +51,10 @@ module.exports = {
             console.error(error);
         }
         
+        //ticket
+
             const ticketId = '1165957993691611147'
             const ticketChan = "channel(ticketId)"
-            console.log(channel)
             const userName = 'Charlie!';
             const userIcon = 'https://cdn.discordapp.com/avatars/953256335854678067/179b62fa9d3c21e1fab4178dadc5f0f5';
             const ticketEmbed = new EmbedBuilder()
