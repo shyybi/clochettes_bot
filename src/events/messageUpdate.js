@@ -16,21 +16,20 @@ module.exports = {
 
       const logMsg = new EmbedBuilder()
         .setColor(0xffe100)
-        .setTitle("Message modifié")
+        .setTitle("Updated Message")
         .addFields(
           { name: " ", value: " " },
-          { name: "De l'utilisateur:", value: `${author}`, inline: true },
-          { name: " ", value: " ", inline: true },
-          { name: "Dans:", value: `#${msgChan}`, inline: true },
+          { name: "From User:", value: `${author}`, inline: true },
+          { name: "In :", value: `#${msgChan}`, inline: true },
           { name: " ", value: " " },
           { name: " ", value: " " },
-          { name: "Contenu", value: `${content}` },
-          { name: "Nouveau", value: `${newContent}` },
+          { name: "Old Content", value: `${content}` },
+          { name: "New Content", value: `${newContent}` },
           { name: " ", value: " " }
         )
         .setThumbnail("https://cdn.discordapp.com/avatars/1006183291864481873/40fd85bc6ef83af39ca8e6d08b6c619d")
         .setTimestamp()
-        .setFooter({ text: `par ${userName}`, iconURL: `${userIcon}` });
+        .setFooter({ text: `by ${userName}`, iconURL: `${userIcon}` });
 
       logChann.send({ embeds: [logMsg] });
     }

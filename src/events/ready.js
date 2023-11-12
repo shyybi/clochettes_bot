@@ -1,11 +1,12 @@
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 const { ActivityType } = require('discord.js');
+const { EmbedBuilder } = require('discord.js')
 const consturl = 'https://twitch.tv/charliereckt'
 module.exports = {
     name: 'ready',
     once: true,
-    async execute(client) {
+    async execute(client, ready, message, channel ) {
         const rest = new REST({ version: '9' }).setToken(client.token);
         
 
@@ -17,7 +18,7 @@ module.exports = {
                 name: "Made by Charlie",
             },
             {
-                name: "https://sodium.dev"
+                name: "https://sodium.dev/"
             },
             {
                 name: 'X : @SodiumDev',
@@ -49,5 +50,23 @@ module.exports = {
         } catch (error) {
             console.error(error);
         }
+        
+        //ticket
+
+            const ticketId = '1165957993691611147'
+            const ticketChan = "channel(ticketId)"
+            const userName = 'Charlie!';
+            const userIcon = 'https://cdn.discordapp.com/avatars/953256335854678067/179b62fa9d3c21e1fab4178dadc5f0f5';
+            const ticketEmbed = new EmbedBuilder()
+                .setColor(0x48f542)
+                .setTitle('Ticket')
+                .addFields(
+                    { name: " ", value: "Create a ticket here" }
+                )
+                .setThumbnail('https://cdn.discordapp.com/avatars/1006183291864481873/40fd85bc6ef83af39ca8e6d08b6c619d')
+                .setTimestamp()
+                .setFooter({ text: `by ${userName}`, iconURL: `${userIcon}` });
+
+            //ticketChan.send({ embeds: [ticketEmbed] });
     }
 };
