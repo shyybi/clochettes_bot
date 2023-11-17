@@ -12,7 +12,7 @@ module.exports = {
         .setTitle("Bot's informations")
         .addFields(
             {name: "Online since : **<t:1691509860:R>**", value:"\u200b"},
-            {name: "Made by 'charliereckt'", value:"\u200b"},
+            {name: "Made by 'charlierecket'", value:"\u200b"},
             {}
 
         )
