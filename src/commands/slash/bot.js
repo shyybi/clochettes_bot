@@ -16,6 +16,7 @@ module.exports = {
             {name: "Made by Clochettes", value:"\u200b", inline: true},
             {name: "a", value: "a"}
         )
+        .setThumbnail(config.clientIcon)
         await interaction.reply({embeds: [botinfo]})
     },
 };
