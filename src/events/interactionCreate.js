@@ -1,3 +1,6 @@
+const fs = require('fs');
+const rawdata = fs.readFileSync('config/config.json');
+const config = JSON.parse(rawdata);
 module.exports = {
     name: 'interactionCreate',
     async execute(interaction){
