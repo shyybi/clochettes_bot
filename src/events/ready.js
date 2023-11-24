@@ -12,19 +12,19 @@ module.exports = {
 
         let status = [
             {
-                name: 'Sodium Development',
+                name: 'ClochettesDev',
             },
             {
-                name: "Made by Charlie",
+                name: "Made by Clochettes",
             },
             {
-                name: "https://sodium.dev/"
+                name: "https://clochettes.me/"
             },
             {
-                name: 'X : @SodiumDev',
+                name: 'X : @cl0w0chettes',
             },
             {
-                name: 'Git : Sodium-Dev',
+                name: 'Git : Clochettes',
             },
             {
                 name: "I'm Open Source !"

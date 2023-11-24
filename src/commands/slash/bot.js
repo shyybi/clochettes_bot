@@ -11,10 +11,10 @@ module.exports = {
         const botinfo = new EmbedBuilder()
         .setTitle("Bot's informations")
         .addFields(
-            {name: "Online since : **<t:1691509860:R>**", value:"\u200b"},
-            {name: "Made by AlkaTill", value:"\u200b"},
-            {}
-
+            {name: "Online since", value:"<t:1691509860:R>", inline: true},
+            {name: "\u200b", value: "\u200b", inline:true},
+            {name: "Made by Clochettes", value:"\u200b", inline: true},
+            {name: "a", value: "a"}
         )
         await interaction.reply({embeds: [botinfo]})
     },

@@ -18,7 +18,7 @@ module.exports = {
                 {name: "/mute", value: "a simple timeout command", inline:true},
                 {name: "/kick", value: "a simple kick command", inline:true},
                 {name: "\u200b", value: "\u200b"},
-                {name: "**User commands**", value: "\u200b"},
+                {name: "**Users commands**", value: "\u200b"},
                 {name: "/help", value:"Show this Embed", inline:true},
                 {name: "/roll", value: "Roll a dice", inline:true},
                 {name: "\u200b", value: "\u200b", inline:true},
@@ -33,7 +33,7 @@ module.exports = {
             .setColor(config.embedColor)
             .setTitle("Help Page")
             .addFields(
-                {name: "**User commands**", value: "\u200b"},
+                {name: "**Users commands**", value: "\u200b"},
                 {name: "/help", value:"Show this Embed", inline:true},
                 {name: "/roll", value: "Roll a dice", inline:true},
                 {name: "\u200b", value: "\u200b", inline:true},
@@ -44,7 +44,7 @@ module.exports = {
             .setTimestamp()
             .setFooter({ text: `by ${config.userName}`, iconURL: `${config.userIcon}` });
 
-        if(interaction.member.roles.cache.has('1166305540431954000')){
+        if(interaction.member.roles.cache.has('')){
             await interaction.reply({ embeds: [adminHelp]})
         }else{
             await interaction.reply({embeds: [userHelp]})

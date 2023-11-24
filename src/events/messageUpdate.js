@@ -1,12 +1,13 @@
 const { EmbedBuilder } = require("discord.js");
-
+const fs = require('fs');
+const rawdata = fs.readFileSync('config/config.json');
+const config = JSON.parse(rawdata);
 module.exports = {
   name: "messageUpdate",
   once: false, // Retirez "once: true" pour exécuter l'événement chaque fois qu'un message est édité
   async execute(oldMessage, newMessage) {
     function updateMsg() {
       const userName = "Charlie!"; // Le compte de Charlie
-      const userIcon ="https://cdn.discordapp.com/avatars/953256335854678067/179b62fa9d3c21e1fab4178dadc5f0f5";
       const logId = "1168548140496994425";
       const author = oldMessage.author;
       const content = oldMessage.content;
@@ -27,9 +28,9 @@ module.exports = {
           { name: "New Content", value: `${newContent}` },
           { name: " ", value: " " }
         )
-        .setThumbnail("https://cdn.discordapp.com/avatars/1006183291864481873/40fd85bc6ef83af39ca8e6d08b6c619d")
+        .setThumbnail("https://cdn.discordapp.com/avatars/"+message.author.id+"/"+message.author.avatar+".jpeg")
         .setTimestamp()
-        .setFooter({ text: `by ${userName}`, iconURL: `${userIcon}` });
+        .setFooter({ text: `by ${userName}`, iconURL: `${config.userIcon}` });
 
       logChann.send({ embeds: [logMsg] });
     }
