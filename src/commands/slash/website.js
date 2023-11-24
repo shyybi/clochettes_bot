@@ -13,17 +13,16 @@ module.exports = {
 
         const sodiumsite = new EmbedBuilder()
             .setColor(config.embedColor)
-            .setTitle('Our Website')
+            .setTitle('My Website')
             .addFields(
-                { name: "Sodium", value: "https://sodium.dev/" },
-                { name: "Sodium Store", value: "https://store.sodium.dev/" },
-                { name: "X", value: "https://x.com/SodiumDev/" },
-                { name: "Github", value: "https://github.com/Sodium-Dev/" },
-                { name: "Discord", value: "https://discord.sodium.dev/" }
-            )
-            .setThumbnail('https://cdn.discordapp.com/avatars/1006183291864481873/40fd85bc6ef83af39ca8e6d08b6c619d')
-            .setTimestamp()
-            .setFooter({ text: `By ${userName}`, iconURL: userIcon });
+                { name: "My WebSite", value: "https://clochettes.me/" },
+                { name: "X", value: "https://x.com/cl0w0chettes/" },
+                { name: "Github", value: "https://github.com/clochettes/" },
+                { name: "Discord", value: "https://discord.clochettes.me/" }
+                )
+                .setThumbnail("")
+                .setTimestamp()
+                .setFooter({ text: `By ${userName}`, iconURL:`${config.userIcon}` });
 
         interaction.reply({ embeds: [sodiumsite] });
     },

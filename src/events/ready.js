@@ -12,23 +12,23 @@ module.exports = {
 
         let status = [
             {
-                name: 'Sodium Development',
+                name: 'ClochettesDev',
             },
             {
-                name: "Made by Charlie",
+                name: "Made by Clochettes",
             },
             {
-                name: "https://sodium.dev/"
+                name: "https://clochettes.me/"
             },
             {
-                name: 'X : @SodiumDev',
+                name: 'X : @cl0w0chettes',
             },
             {
-                name: 'Git : Sodium-Dev',
+                name: 'Git : Clochettes',
             },
             {
                 name: "I'm Open Source !"
-            },
+            }, 
         ]
           
         setInterval(()=> {
@@ -51,22 +51,5 @@ module.exports = {
             console.error(error);
         }
         
-        //ticket
-
-            const ticketId = '1165957993691611147'
-            const ticketChan = "channel(ticketId)"
-            const userName = 'Charlie!';
-            const userIcon = 'https://cdn.discordapp.com/avatars/953256335854678067/179b62fa9d3c21e1fab4178dadc5f0f5';
-            const ticketEmbed = new EmbedBuilder()
-                .setColor(0x48f542)
-                .setTitle('Ticket')
-                .addFields(
-                    { name: " ", value: "Create a ticket here" }
-                )
-                .setThumbnail('https://cdn.discordapp.com/avatars/1006183291864481873/40fd85bc6ef83af39ca8e6d08b6c619d')
-                .setTimestamp()
-                .setFooter({ text: `by ${userName}`, iconURL: `${userIcon}` });
-
-            //ticketChan.send({ embeds: [ticketEmbed] });
     }
 };

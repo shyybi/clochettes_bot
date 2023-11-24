@@ -1,5 +1,7 @@
 const { EmbedBuilder } = require("discord.js");
-
+const fs = require('fs');
+const rawdata = fs.readFileSync('config/config.json');
+const config = JSON.parse(rawdata);
 module.exports = {
     name: 'messageDelete',
     once: false,
@@ -25,9 +27,9 @@ module.exports = {
                     { name: 'Content', value: `${content}` },
                     { name: " ", value: " " },
                 )
-                .setThumbnail('https://cdn.discordapp.com/avatars/1006183291864481873/40fd85bc6ef83af39ca8e6d08b6c619d')
+                .setThumbnail("https://cdn.discordapp.com/avatars/"+message.author.id+"/"+message.author.avatar+".jpeg")
                 .setTimestamp()
-                .setFooter({ text: `by ${userName}`, iconURL: `${userIcon}` });
+                .setFooter({ text: `by ${userName}`, iconURL: `${config.userIcon}` });
 
             logChann.send({ embeds: [logMsg] });
         }
