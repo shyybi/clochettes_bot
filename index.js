@@ -41,7 +41,7 @@ const slashcommands = [];
 
 fs.readdirSync('./src/commands/slash').forEach(async file => {
   const command = await require(`./src/commands/slash/${file}`);
-  client.slashdatas.push(command.data.toJSON());
+  client.slashdatas.push(command.data.toJSON())
   client.slashcommands.set(command.data.name, command);
 })
 

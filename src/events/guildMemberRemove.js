@@ -7,7 +7,7 @@ module.exports = {
 
         const Welcome = new EmbedBuilder()
             .setColor('#ca5cdd')
-            .setTitle('A Traveler has left us !')
+            .setTitle('A Traveler left us !')
             .setDescription(`${member} has left the server... see you soon ${member} !` )
             .setImage('https://cdn.discordapp.com/attachments/1035693937383452775/1169637329095377066/anime-welcome.png?ex=655620a6&is=6543aba6&hm=b3427b8d4390fba564962f79fb16449699987ec2aeb3bc30449ba15aedac6006&')
             
