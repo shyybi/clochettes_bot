@@ -30,8 +30,14 @@ module.exports = {
                 .setThumbnail("https://cdn.discordapp.com/avatars/"+message.author.id+"/"+message.author.avatar+".jpeg")
                 .setTimestamp()
                 .setFooter({ text: `by ${userName}`, iconURL: `${config.userIcon}` });
+                
+            if(message.author.id === "1177559796975669340") {
+                return;
+            }
+            else{
+                logChann.send({ embeds: [logMsg] });
+            }
 
-            logChann.send({ embeds: [logMsg] });
         }
         deleteMsg();
     }

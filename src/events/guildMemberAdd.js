@@ -14,5 +14,14 @@ module.exports = {
             
         // Envoyer un message de bienvenue
         channel.send({ embeds: [Goodbye] });
+
+        const roleId ="1166016113814020116"
+        const roleAdd = member.roles.add(roleId).catch(console.error);
+        const logChann = member.guild.channels.cache.find(chnl => chnl.id === '1168548140496994425');
+        if (roleAdd) {
+            logChann.send(`Role <**MEMBER**>.id=**${roleId}** added to <@${member.user.id}>`);
+        } else {
+            logChann.send(`Role <**MEMBER**>.id=**${roleId}** not added to <@${member.user.id}> due to error, please check the logs`);
+        }        
     },
 };

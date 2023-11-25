@@ -32,7 +32,12 @@ module.exports = {
         .setTimestamp()
         .setFooter({ text: `by ${userName}`, iconURL: `${config.userIcon}` });
 
-      logChann.send({ embeds: [logMsg] });
+      if(message.author.id === "1177559796975669340") {
+          return;
+      }
+      else{
+          logChann.send({ embeds: [logMsg] });
+      }
     }
 
     updateMsg();
