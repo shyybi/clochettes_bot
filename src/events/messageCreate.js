@@ -31,7 +31,7 @@ module.exports = {
                 .setTimestamp()
                 .setFooter({ text: `by ${userName}`, iconURL: `${config.userIcon}` });
 
-            if(message.author.id === "1177559796975669340") {
+            if(message.author.id == "1177559796975669340") {
                 return;
             }
             else{

@@ -20,7 +20,7 @@ module.exports = {
                 { name: "Github", value: "https://github.com/clochettes/" },
                 { name: "Discord", value: "https://discord.clochettes.me/" }
                 )
-                .setThumbnail("")
+                .setThumbnail(config.clientIcon)
                 .setTimestamp()
                 .setFooter({ text: `By ${userName}`, iconURL:`${config.userIcon}` });
 
