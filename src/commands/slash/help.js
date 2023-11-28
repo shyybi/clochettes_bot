@@ -22,10 +22,10 @@ module.exports = {
                 {name: "/help", value:"Show this Embed", inline:true},
                 {name: "/roll", value: "Roll a dice", inline:true},
                 {name: "\u200b", value: "\u200b", inline:true},
-                {name: "/website", value: "Show the Sodium's Website", inline:true},
+                {name: "/website", value: "Show Clochettes's Website", inline:true},
                 {name: "/bot", value: "Show the bot informations", inline:true}
             )
-            .setThumbnail('https://cdn.discordapp.com/avatars/1006183291864481873/40fd85bc6ef83af39ca8e6d08b6c619d')
+            .setThumbnail(config.clientIcon)
             .setTimestamp()
             .setFooter({ text: `by ${config.userName}`, iconURL: `${config.userIcon}` });
 
@@ -37,14 +37,14 @@ module.exports = {
                 {name: "/help", value:"Show this Embed", inline:true},
                 {name: "/roll", value: "Roll a dice", inline:true},
                 {name: "\u200b", value: "\u200b", inline:true},
-                {name: "/website", value: "Show the Sodium's Website", inline:true},
+                {name: "/website", value: "Show Clochettes's Website", inline:true},
                 {name: "/bot", value: "Show the bot informations", inline:true}
             )
-            .setThumbnail('https://cdn.discordapp.com/avatars/1006183291864481873/40fd85bc6ef83af39ca8e6d08b6c619d')
+            .setThumbnail(config.clientIcon)
             .setTimestamp()
             .setFooter({ text: `by ${config.userName}`, iconURL: `${config.userIcon}` });
 
-        if(interaction.member.roles.cache.has('')){
+        if(interaction.member.roles.cache.has('1165957606838386708')){
             await interaction.reply({ embeds: [adminHelp]})
         }else{
             await interaction.reply({embeds: [userHelp]})
