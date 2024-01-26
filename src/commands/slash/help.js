@@ -23,7 +23,7 @@ module.exports = {
                 {name: "/help", value:"Show this Embed", inline:true},
                 {name: "/roll", value: "Roll a dice", inline:true},
                 {name: "\u200b", value: "\u200b", inline:true},
-                {name: "/website", value: "Show the Sodium's Website", inline:true},
+                {name: "/website", value: "Show the Clochettes's Website", inline:true},
                 {name: "/bot", value: "Show the bot informations", inline:true}
             )
             .setThumbnail(`${client.user.displayAvatarURL()}`)
