@@ -5,7 +5,7 @@ const config = JSON.parse(rawdata);
 module.exports = {
   name: "messageUpdate",
   once: false, // Retirez "once: true" pour exécuter l'événement chaque fois qu'un message est édité
-  async execute(oldMessage, newMessage) {
+  async execute(oldMessage, newMessage, message, client) {
     function updateMsg() {
       const userName = "Charlie!"; // Le compte de Charlie
       const logId = "1168548140496994425";
@@ -28,18 +28,14 @@ module.exports = {
           { name: "New Content", value: `${newContent}` },
           { name: " ", value: " " }
         )
-        .setThumbnail("https://cdn.discordapp.com/avatars/"+message.author.id+"/"+message.author.avatar+".jpeg")
+        .setThumbnail("https://cdn.discordapp.com/avatars/"+ oldMessage.author.id+"/"+ oldMessage.author.avatar+".jpeg")
         .setTimestamp()
         .setFooter({ text: `by ${userName}`, iconURL: `${config.userIcon}` });
 
-      if(message.author.id === "1177559796975669340") {
-          return;
-      }
-      else{
-          logChann.send({ embeds: [logMsg] });
-      }
+      logChann.send({ embeds: [logMsg] });
     }
 
     updateMsg();
+    console.log(oldMessage.author.id)
   },
 };

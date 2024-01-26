@@ -2,7 +2,7 @@ const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 const { ActivityType } = require('discord.js');
 const { EmbedBuilder } = require('discord.js')
-const consturl = 'https://twitch.tv/charliereckt'
+const consturl = 'https://twitch.tv/its_charlowotte'
 module.exports = {
     name: 'ready',
     once: true,
@@ -21,7 +21,7 @@ module.exports = {
                 name: "https://clochettes.me/"
             },
             {
-                name: 'X : @cl0w0chettes',
+                name: 'X : @Its_Charlottees',
             },
             {
                 name: 'Git : Clochettes',
@@ -29,6 +29,28 @@ module.exports = {
             {
                 name: "I'm Open Source !"
             }, 
+            {
+                name: 'A bad day, is just a little moment in your life',
+            },
+            {
+                name: "Working on Eden's Garden",
+            },
+            {
+                name: 'Have you seen Eden ?',
+            },
+            {
+                name: 'Who is in the mirror ?',
+            },
+            {
+                name: 'My reflection winked at me',
+            },
+            {
+                name: "I'm lost. I need help",
+            },
+            {
+                name: "I feel empty inside...",
+            },
+            
         ]
           
         setInterval(()=> {

@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { EmbedBuilder, Embed } = require('discord.js')
+const client = require('discord.js')
 const fs = require('fs');
 const rawdata = fs.readFileSync('config/config.json');
 const config = JSON.parse(rawdata);
@@ -7,7 +8,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('help')
         .setDescription('Help Embed'),
-    run: async (Client, interaction, GuildMembers) => {
+    run: async (client, interaction, GuildMembers) => {
 
         const adminHelp = new EmbedBuilder()
             .setColor(config.embedColor)
@@ -25,7 +26,7 @@ module.exports = {
                 {name: "/website", value: "Show the Sodium's Website", inline:true},
                 {name: "/bot", value: "Show the bot informations", inline:true}
             )
-            .setThumbnail('https://cdn.discordapp.com/avatars/1006183291864481873/40fd85bc6ef83af39ca8e6d08b6c619d')
+            .setThumbnail(`${client.user.displayAvatarURL()}`)
             .setTimestamp()
             .setFooter({ text: `by ${config.userName}`, iconURL: `${config.userIcon}` });
 
@@ -40,7 +41,7 @@ module.exports = {
                 {name: "/website", value: "Show the Sodium's Website", inline:true},
                 {name: "/bot", value: "Show the bot informations", inline:true}
             )
-            .setThumbnail('https://cdn.discordapp.com/avatars/1006183291864481873/40fd85bc6ef83af39ca8e6d08b6c619d')
+            .setThumbnail(`${client.user.displayAvatarURL()}`)
             .setTimestamp()
             .setFooter({ text: `by ${config.userName}`, iconURL: `${config.userIcon}` });
 
