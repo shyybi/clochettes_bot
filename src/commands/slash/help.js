@@ -45,7 +45,7 @@ module.exports = {
             .setTimestamp()
             .setFooter({ text: `by ${config.userName}`, iconURL: `${config.userIcon}` });
 
-        if(interaction.member.roles.cache.has('')){
+        if(interaction.member.roles.cache.has('1190416539330035872')){
             await interaction.reply({ embeds: [adminHelp]})
         }else{
             await interaction.reply({embeds: [userHelp]})
