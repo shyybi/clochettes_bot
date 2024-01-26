@@ -1,22 +1,26 @@
 [
     {
         "name": "Eden",
-        "image": "Eden",
-        "description": "Eden"
+        "image": "https://raw.githubusercontent.com/clochettes/clochettes_bot/dev/src/assets/pfp.gif",
+        "description": "Eden is the main character of Eden's Garden !",
+        "rate": "Rare"
     },
     {
         "name": "Matteo",
-        "image": "Matteo",
-        "description": "Matteo"
+        "image": "https://raw.githubusercontent.com/clochettes/clochettes_bot/dev/src/assets/pfp.gif",
+        "description": "Matteo",
+        "rate": "Rare"
     },
     {
         "name": "Evan",
-        "image": "Evan",
-        "description": "Evan"
+        "image": "https://raw.githubusercontent.com/clochettes/clochettes_bot/dev/src/assets/pfp.gif",
+        "description": "Evan",
+        "rate": "Rare"
     },
     {
         "name": "George",
-        "image": "George",
-        "description": "George"
+        "image": "https://raw.githubusercontent.com/clochettes/clochettes_bot/dev/src/assets/pfp.gif",
+        "description": "George",
+        "rate": "Rare"
     }
 ]

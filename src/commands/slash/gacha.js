@@ -9,9 +9,7 @@ module.exports = {
         .setName('gacha')
         .setDescription('.'),
     run: async (Client, interaction) => {
-
         const sqlite3 = require('sqlite3').verbose();
-
         // Ouvrir la base de données
         let db = new sqlite3.Database('db/gacha.db', (err) => {
           if (err) {
@@ -19,7 +17,6 @@ module.exports = {
           }
           console.log('Connected to the sample database.');
         });
-        
         db.serialize(() => {
           // Créer la table users
           db.run(`CREATE TABLE count (
@@ -45,28 +42,21 @@ module.exports = {
             } else {
             console.log("Table 'users' created.");
             }
-        });
-          
-        });
-        
+        });          
+      });
         db.close((err) => {
           if (err) {
             console.error(err.message);
           }
           console.log('Close the database connection.');
         });
-
-
-
-
-
         const list = JSON.parse(rawdata);
         const randomIndex = Math.floor(Math.random() * list.length);
         const randomItem = list[randomIndex];
-
         const embed = new EmbedBuilder()
             .setTitle(randomItem.name)
-            .setDescription(randomItem.description);
+            .setImage(randomItem.image)
+            .setDescription(randomItem.description)
 
         await interaction.reply({ embeds: [embed] });
     },
