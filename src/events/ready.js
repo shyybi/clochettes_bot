@@ -12,16 +12,13 @@ module.exports = {
 
         let status = [
             {
-                name: 'ClochettesDev',
+                name: 'ClochettesGames Studio',
             },
             {
-                name: "Made by Clochettes",
+                name: "https://clochettesgames.fr/"
             },
             {
-                name: "https://clochettes.me/"
-            },
-            {
-                name: 'X : @Its_Charlottees',
+                name: 'X : @clochettesgames',
             },
             {
                 name: 'Git : Clochettes',
@@ -33,7 +30,7 @@ module.exports = {
                 name: 'A bad day, is just a little moment in your life',
             },
             {
-                name: "Working on Eden's Garden",
+                name: "Working on EdenGarden",
             },
             {
                 name: 'Have you seen Eden ?',
