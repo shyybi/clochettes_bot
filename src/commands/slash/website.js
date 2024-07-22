@@ -15,10 +15,10 @@ module.exports = {
             .setColor(config.embedColor)
             .setTitle('My Website')
             .addFields(
-                { name: "My WebSite", value: "https://clochettes.me/" },
-                { name: "X", value: "https://x.com/cl0w0chettes/" },
-                { name: "Github", value: "https://github.com/clochettes/" },
-                { name: "Discord", value: "https://discord.clochettes.me/" }
+                { name: "My WebSite", value: "https://clochettesgames.fr/" },
+                { name: "X", value: "https://x.com/clochettesgames/" },
+                { name: "Github", value: "https://github.com/gateaulune/clochettes_bot" },
+                { name: "Discord", value: "https://discord.com/invite/pAJyUBfMFQ" }
                 )
                 .setThumbnail(config.clientIcon)
                 .setTimestamp()
